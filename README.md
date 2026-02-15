@@ -5,6 +5,9 @@
 🎓 Master of Computer Applications (MCA)  
 💻 AI & Full-Stack Developer  
 🏫 Dhanalakshmi Srinivasan Engineering College (Autonomous)
+⭐ Developer of AI ATS Resume Analyzer🔥
+
+<img align="right" width="360" height="280" src="https://media0.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZmNwZ2ZlM3lnZzd0YWoxN3VrbHk3cXB6NDA3ZGsyMmFuNTl3eDh5ayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IqRYjzq9wYpY9rAKPk/200.webp"/>
 
 ---
 
@@ -75,7 +78,7 @@ The system helps job seekers to:
 
 ## 📸 Application Preview
 
-<img width="100%" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3dya21ydjBnOGR0Znl0cnVlcThucWlvNDRmYjZieTBidHBmNWR6NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/UZiAuSi7KYFB4nRAWr/100.webp"/>
+<img width="100%" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3dya21ydjBnOGR0Znl0cnVlcThucWlvNDRmYjZieTBidHBmNWR6NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/wGoCQDVjHHGQWcLulD/giphy.webp"/>
 
 ---
 
@@ -94,3 +97,4 @@ The system helps job seekers to:
 ---
 
 ⭐ *If you like this project, consider giving it a star!*
+
