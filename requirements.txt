@@ -1,0 +1,9 @@
+streamlit
+sentence-transformers
+torch
+pdfplumber
+python-docx
+matplotlib
+pandas
+reportlab
+plotly
