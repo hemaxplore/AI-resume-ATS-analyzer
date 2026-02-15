@@ -1,4 +1,4 @@
-📄 AI Resume Screening System (ATS Analyzer)
+**📄 AI Resume Screening System (ATS Analyzer)**
 Hi there 👋 It's me Hemadharshini
 
 🎓 Master of Computer Applications (MCA)
@@ -140,3 +140,4 @@ plotly
 
 ⭐ If you like this project, don't forget to follow!
 🚀 Building AI tools that help students and job seekers succeed.
+
