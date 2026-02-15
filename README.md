@@ -1,143 +1,96 @@
-**📄 AI Resume Screening System (ATS Analyzer)**
-Hi there 👋 It's me Hemadharshini
+# 🤖 AI Resume Screening System (ATS Analyzer)
 
-🎓 Master of Computer Applications (MCA)
-🤖 AI & Full-Stack Developer
+## 👋 Hi, I'm Hemadharshini
 
-<img align="right" width="360" height="260" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/coding.gif">
+🎓 Master of Computer Applications (MCA)  
+💻 AI & Full-Stack Developer  
+🏫 Dhanalakshmi Srinivasan Engineering College (Autonomous)
 
-👩‍🎓 MCA Student at Dhanalakshmi Srinivasan Engineering College (Autonomous)
+---
 
-💻 Passionate about AI, Software Development & Data Engineer
+## 🚀 About The Project
 
-🤖 Built an AI Resume ATS Analyzer with Recruiter View
+**AI Resume Screening System** is an intelligent web application that analyzes resumes using ATS logic and recruiter-style evaluation.
 
-📊 Focused on real-time resume intelligence & automation
+The system helps job seekers to:
 
-🚀 Building real-world industry-level academic projects
+✅ Understand ATS compatibility  
+✅ Identify missing skills  
+✅ Improve resume quality  
+✅ Generate ATS-optimized PDF resume  
+✅ View Recruiter Hiring Insights
 
-🌐 **Live Demo**
+---
 
-🚀 (Add your deployed link after deployment)
+## 🌐 Live Demo
+
+🚀 *(Add after deployment)*  
 🔗 https://your-live-app-link.com
 
-🚀 **Project Overview**
+---
 
-AI Resume Screening System is an intelligent web application that analyzes resumes using ATS logic and recruiter-style evaluation.
+## 🧠 Key Features
 
-The system helps job seekers:
+- 📄 Resume Upload (PDF / DOCX)
+- 🎯 ATS Match Score Calculation
+- 🔍 Skill Gap Detection
+- 👩‍💼 Recruiter View Mode
+- ✅ Strength & Risk Analysis
+- 📊 Hiring Confidence Score
+- 🧾 Optimized Resume PDF Generator
+- ⚡ Real-time Resume Intelligence
 
-✅ Understand ATS compatibility
-✅ Identify missing skills
-✅ Improve resume quality
-✅ Generate an ATS-optimized PDF resume
+---
 
-✨ **Key Features**
-📊 ATS Resume Analysis
+## ⚙️ How It Works
 
-Automatic ATS Match Score
+1️⃣ Upload Resume  
+2️⃣ Paste Job Description  
+3️⃣ AI analyzes resume structure  
+4️⃣ ATS score calculated  
+5️⃣ Missing skills detected  
+6️⃣ Recruiter insights generated  
+7️⃣ Optimized PDF created
 
-Job Description comparison
+---
 
-Keyword matching engine
+## 🛠️ Tech Stack
 
-🧠 **Skill Gap Detection**
+### 💻 Backend
+<img src="https://img.icons8.com/color/48/python.png"/> 
+<img src="https://img.icons8.com/color/48/streamlit.png"/>
 
-Shows matched vs missing skills
+### 🌐 Frontend
+<img src="https://img.icons8.com/color/48/html-5.png"/>
+<img src="https://img.icons8.com/color/48/css3.png"/>
+<img src="https://img.icons8.com/color/48/javascript.png"/>
 
-ATS improvement suggestions
+### 🗄️ Database & Tools
+<img src="https://img.icons8.com/color/48/mysql-logo.png"/>
+<img src="https://img.icons8.com/color/48/git.png"/>
+<img src="https://img.icons8.com/color/48/github.png"/>
+<img src="https://img.icons8.com/color/48/visual-studio-code-2019.png"/>
 
-Skill gap visualization chart
+---
 
-👩‍💼 **Recruiter View Mode (Unique Feature)**
+## 📸 Application Preview
 
-Top candidate strengths
+<img width="100%" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3dya21ydjBnOGR0Znl0cnVlcThucWlvNDRmYjZieTBidHBmNWR6NSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/UZiAuSi7KYFB4nRAWr/100.webp"/>
 
-Risk flags detection
+---
 
-Hiring confidence %
+## 🎓 Education
 
-Recruiter decision:
+🎓 MCA — Dhanalakshmi Srinivasan Engineering College (2024–2026)  
+🎓 BCA (O Grade) — Cauvery College for Women (2021–2024)
 
-✅ Strong Hire
+---
 
-⚠️ Consider
+## 📬 Contact
 
-❌ Reject
+📧 Email: darshinihema2102@gmail.com  
+📍 Location: Trichy, Tamil Nadu, India  
 
-📄 **Smart Resume Generator**
+---
 
-Extracts:
-
-Education
-
-Internships
-
-Projects
-
-Experience
-
-Generates ATS-optimized PDF automatically
-
-🛠️ **Tech Stack**
-Frontend
-
-Streamlit UI
-
-HTML/CSS styling
-
-Plotly Charts
-
-Backend
-
-Python
-
-Regex-based ATS Engine
-
-NLP-style keyword analysis
-
-Libraries Used
-
-Streamlit
-
-pdfplumber
-
-python-docx
-
-reportlab
-
-plotly
-
-🧠 **How It Works**
-
-1️⃣ Upload Resume (PDF/DOCX)
-2️⃣ Paste Job Description
-3️⃣ AI analyzes resume structure
-4️⃣ ATS Score calculated
-5️⃣ Skill gap identified
-6️⃣ Recruiter insights generated
-7️⃣ Optimized Resume PDF created
-
-📸 **Application Preview**
-<img src="https://raw.githubusercontent.com/github/explore/main/topics/artificial-intelligence/artificial-intelligence.png" width="100%"/>
-🛠️ **Skills Used**
-<img height="50" width="50" src="https://img.icons8.com/color/48/python.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/streamlit.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/html-5.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/css3.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/mysql-logo.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/git.png"/>
-🧰 **Tools & IDE**
-<img height="50" width="50" src="https://img.icons8.com/color/48/visual-studio-code-2019.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/pycharm.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/github.png"/> <img height="50" width="50" src="https://img.icons8.com/color/48/windows-10.png"/>
-🎓 **Education**
-
-🎓 MCA – Dhanalakshmi Srinivasan Engineering College (2024–2026)
-
-🎓 BCA (O Grade) – Cauvery College for Women (2021–2024)
-
-📬 **Contact Me**
-
-📧 Email: darshinihema2102@gmail.com
-
-📞 Phone: +91 7092389282
-
-📍 Tamil Nadu, India
-
-⭐ If you like this project, don't forget to follow!
-🚀 Building AI tools that help students and job seekers succeed.
-
+⭐ *If you like this project, consider giving it a star!*
