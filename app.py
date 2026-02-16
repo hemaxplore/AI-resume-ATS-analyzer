@@ -24,15 +24,23 @@ st.set_page_config(
 # --------------------------------------------------
 # SAFE SESSION INIT
 # --------------------------------------------------
-for key in ["analyzed","resume","jd","confirm_reset","form_version"]:
-    if key not in st.session_state:
-        st.session_state[key] = False if key=="analyzed" else None
+defaults = {
+    "analyzed": False,
+    "resume": None,
+    "jd": None,
+    "confirm_reset": False,
+    "form_version": 0
+}
+
+for k, v in defaults.items():
+    if k not in st.session_state:
+        st.session_state[k] = v
 
 if st.session_state.form_version is None:
     st.session_state.form_version = 0 
     
 if "recruiter_mode" not in st.session_state:
-    st.session_state.recruiter_mode = False      
+    st.session_state.recruiter_mode = False 
 
 # --------------------------------------------------
 # RESUME TEXT EXTRACTION (FIXED)
@@ -409,6 +417,7 @@ def recruiter_analysis(resume, matched_skills, missing_skills, score):
 # --------------------------------------------------
 # 🤖 AI RECRUITER CONFIDENCE ENGINE
 # --------------------------------------------------
+@st.cache_data(show_spinner=False)
 def ai_recruiter_confidence(resume, matched, missing, score):
 
     resume_lower = resume.lower()
@@ -821,10 +830,11 @@ def is_candidate_experienced(experience_list):
 
     return len(real_exp) > 0
 
+
 # --------------------------------------------------
 # PDF GENERATION 
 # --------------------------------------------------
-def generate_optimized_resume_pdf(details, matched, missing):
+def generate_optimized_resume_pdf(details, matched, missing, resume, jd):
     buffer = io.BytesIO()
 
     doc = SimpleDocTemplate(
@@ -903,7 +913,7 @@ def generate_optimized_resume_pdf(details, matched, missing):
     ))
     
     #---------- EDUCATION ---------
-    education_data = extract_education_section(st.session_state.resume)
+    education_data = extract_education_section(resume)
 
     if education_data:
         content.append(Paragraph("EDUCATION", styles["Section"]))
@@ -929,7 +939,7 @@ def generate_optimized_resume_pdf(details, matched, missing):
             content.append(Spacer(1,8))
 
     # ---------- INTERNSHIP ----------
-    internship_data = extract_internship_section(st.session_state.resume)
+    internship_data = extract_internship_section(resume)
 
     if internship_data:
         content.append(Paragraph("INTERNSHIP EXPERIENCE", styles["Section"]))
@@ -957,7 +967,7 @@ def generate_optimized_resume_pdf(details, matched, missing):
             content.append(Spacer(1, 8))
             
     # ---------- EXPERIENCE (SMART ATS FILTER) ----------
-    experience_data = extract_experience_section(st.session_state.resume)
+    experience_data = extract_experience_section(resume)
 
     # show only if REAL job experience exists
     if experience_data and is_candidate_experienced(experience_data):
@@ -988,7 +998,7 @@ def generate_optimized_resume_pdf(details, matched, missing):
             content.append(Spacer(1,8))
              
     # ---------- PROJECTS ----------
-    project_data = extract_project_section(st.session_state.resume)
+    project_data = extract_project_section(resume)
 
     if project_data:
         content.append(Paragraph("PROJECTS", styles["Section"]))
@@ -1030,11 +1040,16 @@ def generate_optimized_resume_pdf(details, matched, missing):
     # ---------- BUILD PDF (FINAL STEP) ----------
     try:
         doc.build(content)
-        buffer.seek(0)
-        return buffer
+
+        pdf_bytes = buffer.getvalue()   # ✅ convert to bytes
+        buffer.close()
+
+        return pdf_bytes
+
     except Exception as e:
         print("PDF ERROR:", e)
         return None
+
 
 # =================================================
 # CSS
@@ -1195,6 +1210,7 @@ with right:
                     st.session_state.analyzed = False
                     st.session_state.resume = None
                     st.session_state.jd = None
+                    st.session_state.pdf_bytes = None
                     st.session_state.confirm_reset = False
 
                     # reset widgets
@@ -1284,8 +1300,12 @@ with right:
         #----------- ATS SKILL TO ADD ------------
         st.subheader("🚀 Skills To Add (ATS Gap)")
 
-        for skill in missing:
-            st.write("•", skill.title())
+        if missing:
+            for skill in missing:
+                st.write("•", skill.title())
+        else:
+            st.success("No critical skill gaps detected ✅")
+
 
         # ---------- SKILL GAP CHART ----------
         fig = go.Figure()
@@ -1322,17 +1342,22 @@ with right:
             st.warning("• " + s)
     
         # ---------- PDF DOWNLOAD ----------
-        pdf_file = generate_optimized_resume_pdf(details, matched, missing)
+        if "pdf_bytes" not in st.session_state:
+            st.session_state.pdf_bytes = generate_optimized_resume_pdf(
+                details,matched,missing, resume, jd
+            ) 
+        pdf_bytes = st.session_state.pdf_bytes    
 
-        if pdf_file:
+        if pdf_bytes:
             st.download_button(
                 "⬇️ Download ATS Optimized Resume (PDF)",
-                data=pdf_file.getvalue(),
+                data=pdf_bytes,
                 file_name="ATS_Optimized_Resume.pdf",
                 mime="application/pdf"
             )
         else:
             st.error("PDF generation failed.")
+
          
 # --------------------------------------------------
 # ✅ FOOTER (FINAL FIX)
@@ -1347,6 +1372,7 @@ st.markdown("""
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
