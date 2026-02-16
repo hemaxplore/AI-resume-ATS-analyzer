@@ -28,8 +28,7 @@ The system helps job seekers to:
 ## 🌐 Live Demo
 
 🚀 *(Add after deployment)*  
-🔗 https://your-live-app-link.com
-
+🔗 (https://hirelensats.streamlit.app/)
 ---
 
 ## 🧠 Key Features
@@ -97,4 +96,5 @@ The system helps job seekers to:
 ---
 
 ⭐ *If you like this project, consider giving it a star!*
+
 
